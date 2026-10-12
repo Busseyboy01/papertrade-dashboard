@@ -1,0 +1,74 @@
+[
+ {
+  "wallet": "CxgPWvH2GoEDENELne2XKAR2z2Fr4shG2uaeyqZceGve",
+  "name": "narc",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 2,
+  "wins_losses": "14/2",
+  "pnl_sol_1d": "+277.61",
+  "pnl_usd_1d": "30,153.0"
+ },
+ {
+  "wallet": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+  "name": "decu",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 3,
+  "wins_losses": "47/51",
+  "pnl_sol_1d": "+107.38",
+  "pnl_usd_1d": "11,663.8"
+ },
+ {
+  "wallet": "5B79fMkcFeRTiwm7ehsZsFiKsC7m7n1Bgv9yLxPp9q2X",
+  "name": "bandit",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 4,
+  "wins_losses": "35/56",
+  "pnl_sol_1d": "+96.27",
+  "pnl_usd_1d": "10,456.5"
+ },
+ {
+  "wallet": "215nhcAHjQQGgwpQSJQ7zR26etbjjtVdW74NLzwEgQjP",
+  "name": "OGAntD",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 6,
+  "wins_losses": "2/1",
+  "pnl_sol_1d": "+63.55",
+  "pnl_usd_1d": "6,902.2"
+ },
+ {
+  "wallet": "CUHBzSPSaNS3tArEtM3maSV6pNdJhHJFYZpurPPK9P7H",
+  "name": "samsrep",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 7,
+  "wins_losses": "2/5",
+  "pnl_sol_1d": "+62.99",
+  "pnl_usd_1d": "6,842.3"
+ },
+ {
+  "wallet": "FAicXNV5FVqtfbpn4Zccs71XcfGeyxBSGbqLDyDJZjke",
+  "name": "radiance",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 8,
+  "wins_losses": "15/26",
+  "pnl_sol_1d": "+60.35",
+  "pnl_usd_1d": "6,555.2"
+ },
+ {
+  "wallet": "ardinRsN1mNYVeoJWTBsWeYeXvuR9UUDGMsCDKpb6AT",
+  "name": "trunoest",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 9,
+  "wins_losses": "67/54",
+  "pnl_sol_1d": "+56.75",
+  "pnl_usd_1d": "6,164.4"
+ },
+ {
+  "wallet": "sAdNbe1cKNMDqDsa4npB3TfL62T14uAo2MsUQfLvzLT",
+  "name": "Ethan Prosper",
+  "source": "https://kolscan.io/leaderboard (1d tab, fetched 2026-10-12T13:44:35)",
+  "kolscan_rank": 10,
+  "wins_losses": "6/17",
+  "pnl_sol_1d": "+46.48",
+  "pnl_usd_1d": "5,049.0"
+ }
+]

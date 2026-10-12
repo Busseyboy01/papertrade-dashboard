@@ -1,0 +1,7 @@
+ntfy_topic.txt
+logs/
+*.log
+*.csv
+__pycache__/
+bin/
+*.bak

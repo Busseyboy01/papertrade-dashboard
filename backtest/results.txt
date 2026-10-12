@@ -1,0 +1,6 @@
+2024-10-12..2026-10-11 UTC (730 daily closes)
+B&H      final $517.37 ret +3.5% CAGR +1.7% maxDD -62.9% trades 3
+Trend50  final $929.19 ret +85.8% CAGR +36.4% maxDD -32.5% trades 120
+crit1 True crit2 False => FAIL
+robust trend20 final $552.61 ret +10.5% CAGR +5.1% maxDD -39.2% trades 232
+robust trend100 final $748.41 ret +49.7% CAGR +22.4% maxDD -29.1% trades 93

@@ -1,0 +1,8 @@
+Written 2026-10-12 14:30:43 PDT BEFORE running the backtest.
+Data: data-api.binance.vision daily klines (USDT pairs), last 730 complete days, 50d SMA warmup before window.
+Rule: $500 split equally BTC/ETH/SOL; each slice held while daily close > 50d SMA (incl. that day), else cash; decided+traded at daily close; 0.2% fee per trade (buy and sell). Day 1: enter slices whose close > SMA.
+Benchmark: buy-and-hold equal thirds bought at day-1 close (0.2% fee on buy), never sold.
+PASS iff (1) trend total return > B&H total return, OR (trend maxDD magnitude <= 2/3 of B&H maxDD magnitude AND trend return >= 0.7 * B&H return)
+     AND (2) trend max drawdown >= -25%.
+Note on (1)b: "return >= 70% of B&H" interpreted as trend_total_return >= 0.7 * bh_total_return when bh return > 0; if bh return <= 0, require trend return >= bh return.
+Robustness (20/100 SMA) reported separately, not used for decision.

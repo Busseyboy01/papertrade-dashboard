@@ -1,0 +1,46 @@
+name: paper-poll
+on:
+  schedule: [{cron: '*/5 * * * *'}]
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: paper-poll
+  cancel-in-progress: false
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install -q -r requirements.txt
+      - name: Check data sources (informational)
+        continue-on-error: true
+        run: |
+          for u in "https://api.dexscreener.com/latest/dex/tokens/So11111111111111111111111111111111111111112" \
+                   "https://api.rugcheck.xyz/v1/tokens/DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263/report/summary" \
+                   "https://data-api.binance.vision/api/v3/ticker/price?symbol=BTCUSDT"; do
+            echo "$(curl -s -o /dev/null -w '%{http_code}' -m 15 "$u") $u"; done
+          echo "$(curl -s -m 15 -o /dev/null -w '%{http_code}' https://api.mainnet-beta.solana.com -H 'content-type: application/json' -d '{"jsonrpc":"2.0","id":1,"method":"getSlot"}') solana rpc"
+      - name: Poll (PAPER trading only)
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          TZ: America/Vancouver
+        run: python run.py poll
+      - name: Commit db + dashboard
+        run: |
+          git config user.name "papertrade-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add papertrade.db dashboard/index.html
+          git diff --cached --quiet || { git commit -qm "update dashboard"; git pull -q --rebase && git push -q; }
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: dashboard}
+      - id: deploy
+        uses: actions/deploy-pages@v4
